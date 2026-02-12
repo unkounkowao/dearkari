@@ -1,0 +1,691 @@
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Syuku&family=Prata&display=swap');
+
+
+
+
+body {
+  margin: 0;
+  background: #fffefb;
+  color: #222;
+  font-family: "M PLUS Rounded 1c",sans-serif;
+    overflow-x: hidden;
+
+}
+
+.letter {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 40px 15px 80px;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.site-header {
+  width: 100%;
+  margin: 0;
+}
+
+.site-header img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1 {
+  font-size: 23px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+
+
+.space {
+  margin-top: 100px;
+}
+
+.spacemini {
+  margin-top: 38px;
+}
+
+
+p {
+  margin: 0 0 2.5rem;
+
+}
+
+.deka {
+  font-size: 26px;
+ color: #e4cb52;
+  line-height: 1;
+}
+
+.fukidashi { 
+position: relative; 
+background: #f8f3e8; 
+display: inline-block;
+padding: 16px;
+border-radius: 16px;
+margin-bottom: 24px;
+} 
+
+.fukidashi p {
+  margin: 0;
+}
+
+.fukidashi::after { 
+content: ""; 
+position: absolute; 
+top: 100%; /* 親要素の下端に配置 */ 
+left: 20px; border: 10px solid transparent;
+ border-top-color: #f8f3e8; /* 三角形を作るテクニック */ 
+}
+
+
+.unko {
+  text-align: left;
+  margin: 0;
+ padding: 0; 
+}
+
+.unko img {
+  width: 15%;
+max-width: 64px;
+  height: auto;
+  display: block;
+}
+
+.unkosan {
+  text-align: left;
+  margin: 0;
+ padding: 0; 
+}
+
+.unkosan img {
+  width: 15%;
+max-width: 64px;
+  transform: rotate(270deg);
+  height: auto;
+  display: block;
+}
+
+
+.blog-heading {
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont,
+    'Helvetica Neue', Arial, sans-serif;
+
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+
+  background: linear-gradient(
+    135deg,
+    #1a1d3a,
+    #0f1126
+  );
+
+  padding: 18px 48px;
+  margin: 32px 0;
+
+  line-height: 1.05;
+}
+
+/* ▼ 左の縦ライン（アニメ用・初期は高さ0） */
+.blog-heading::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 12px;
+  height: 0;
+
+  background: linear-gradient(
+    to bottom,
+    #4b99ed,  
+    #9070f7,
+    #d87aff
+  );
+
+  transition: height 0.6s ease;
+}
+
+/* 初期状態：文字は隠す */
+.blog-heading .sub,
+.blog-heading .main {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+/* 表示トリガー */
+.blog-heading.is-visible::before {
+  height: 100%;
+}
+
+.blog-heading.is-visible .sub {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.95s ease 0.35s,
+              transform 0.95s ease 0.35s;
+}
+
+.blog-heading.is-visible .main {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.9s ease 0.7s,
+              transform 0.9s ease 0.7s;
+
+  font-size: clamp(2.0rem, 4.4vw, 3.1rem);
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  color: #f9feff;
+
+  text-shadow:
+    0 0 6px rgba(120, 140, 255, 0.35),
+    0 0 18px rgba(120, 140, 255, 0.2);
+}
+
+/* サブ */
+.blog-heading .sub {
+  display: block;
+  font-size: 0.9rem;
+  letter-spacing: 0.35em;
+  font-weight: 400;
+  color: #9aa4ff;
+  margin-bottom: 8px;
+}
+
+/* スマホ */
+@media (max-width: 600px) {
+  .blog-heading {
+    padding: 10px 10px 10px 20px;
+  }
+
+  .blog-heading .main {
+    letter-spacing: 0.14em;
+  }
+}
+
+
+
+h2 {
+  font-size: 22px;
+  font-weight: 700;
+ margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.big {
+  font-size: 300px;
+line-height: 1; 
+padding-top: 500px;
+padding-bottom: 40px;
+ overflow-wrap: anywhere;
+  word-break: break-word; 
+
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin: 0;
+}
+
+.photos figure {
+  margin: 0;
+text-align: center;
+}
+
+.photos img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.photos figcaption {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #666;
+}
+
+.mikasan {
+color: #e739aa;
+  font-size: 26px;
+  font-weight: 900;
+ margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+
+.kaiwa {
+  text-align: center;
+  margin: 0;
+}
+
+.kaiwa img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.kaiwa figcaption {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #666;
+}
+
+.mika-elegant {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+  font-style: italic;
+
+  color: #bb69a1;
+
+  text-shadow:
+    0 1px 0 #fff,
+    0 0 8px rgba(179, 136, 255, 0.45);
+}
+
+
+.do {
+text-align: left;
+  margin: 0;
+}
+
+.do img {
+  max-width: 90%;
+  height: auto;
+  display: block;
+}
+
+.do figcaption {
+text-align: left;
+  font-size: 17px;
+  color: #222;
+margin-bottom: 8px;
+}
+
+
+
+.zan-ka {
+  font-family: "Yuji Syuku", serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  color: #e07a3f;
+ text-shadow: 
+ 1px 1px 0.5px rgba(70, 70, 70, 7),
+  0 0 8px rgba(255, 217, 141, 1.1);
+
+}
+
+.aa {
+font-family: "Yuji Syuku", serif;
+color: #d20000;
+  line-height: 1;
+font-size: 1.5rem;
+}
+
+.underline {
+    background: linear-gradient(transparent 70%, #f0e5ff 70%);
+}
+
+.bigni {
+text-align: center;
+color: #d20000;
+font-size: 50px;
+font-family: "Prata", serif;
+  font-weight: 900;
+}
+
+
+
+
+.ore {
+  margin: 0;
+}
+
+.ore img {
+  display: block;
+ margin: 0 auto; 
+  max-width: 90%;
+  height: auto;
+}
+
+
+.uwaa {
+font-family: "Yuji Syuku", serif;
+font-size: 80px;
+  font-weight: 900;
+line-height: 0.5;
+  letter-spacing: -0.15em;
+
+}
+
+.syouko {
+  text-align: center;
+ margin: 0;
+}
+
+.syouko img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.kogoe {
+  font-size: 0.85em;
+ color: #666;
+}
+
+.hakushin {
+ font-family: "Yuji Syuku", serif;
+}
+
+.kowai {
+color: #413d85;
+}
+
+
+hr.style11 {
+  border: none;
+  height: 6px;
+  background:
+    repeating-linear-gradient(
+      to right,
+      #af82b5 0,
+      #b58294 8px,
+      transparent 8px,
+      transparent 16px
+    );
+}
+
+.shibuya {
+  color: #850000;
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+.koukoku {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin: 0;
+}
+
+.koukoku figure {
+  margin: 0;
+text-align: center;
+}
+
+.koukoku img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.koukoku figcaption {
+  margin-top: 10px;
+  font-size: 17px;
+color: #222;
+}
+
+.namida {
+ font-family: "Yuji Syuku", serif;
+font-size: 40px;
+}
+
+.marker {
+    background: linear-gradient(transparent 70%, #ffe5f5 70%);
+}
+
+.unko2 {
+display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+ padding: 0; 
+}
+
+.unko2 img {
+  width: 10%;
+max-width: 45px;
+  height: auto;
+  display: block;
+}
+
+.unko2 figcaption {
+margin-left: auto;
+  font-size: 10px;
+  font-weight: 600;
+  color: #717171;
+  line-height: 1.4;
+}
+
+
+.mujo {
+  display: flex;
+  align-items: center;
+  margin: 1px;
+  gap: 6px;
+  position: relative;
+}
+
+
+.mujo figcaption {
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+
+.mujo img {
+ width: 50%;
+margin-left: auto;
+  border-radius: 16px;
+  height: auto;
+display: block;
+}
+
+.debu {
+  display: flex;
+  align-items: center;
+  margin: 1px;
+  gap: 6px;
+  position: relative;
+}
+
+
+.debu figcaption {
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+
+.debu img {
+ width: 50%;
+margin-left: auto;
+  border-radius: 16px;
+  height: auto;
+display: block;
+}
+
+
+.kesseki {
+text-align: center;
+  margin: 0;
+}
+
+.kesseki img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+.atyo {
+text-align: center;
+  margin: 0;
+}
+
+.atyo img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+.gyabo {
+text-align: center;
+}
+
+.gyabo img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+.onesans {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  position: relative;
+
+  padding: 14px 16px;
+  border-radius: 18px;
+
+  background: #fff7e4;
+
+  border: 3px dashed #945884; /* ← ミシン線・少し太め */
+  margin: 0;
+}
+
+.onesans img {
+ width: 60%;
+  max-width: 60%;
+  height: auto;
+display: block;
+}
+
+.onesans figcaption {
+margin-left: auto;
+  font-size: 10px;
+  font-weight: 600;
+  color: #772161;
+  line-height: 1.4;
+}
+
+/* 外側の枠（トリガー対象） */
+.chk-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  overflow: hidden;
+  width: 100%; /* 幅を確保 */
+}
+
+/* 文字を囲む枠（ここからはみ出たカバーを隠す） */
+.chk-text {
+  position: relative;
+  overflow: hidden; /* ★これが効いていないと青いのが見えてしまいます */
+  padding: 10px 0; /* 文字の上下が切れないように少し余白 */
+}
+
+/* 待機状態の設定 */
+.chk-text::before,
+.chk-text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -40px;
+  right: -70px;
+  border-radius: 50vh;
+  z-index: 2;
+  transform: translateX(-105%); /* 最初は左に隠す */
+}
+
+.chk-text::after {
+z-index: 3; 
+  background: linear-gradient(
+    to bottom,
+    #450c0a 0%,  
+    #851717 30%,  
+    #ffe9a2 50%, 
+    #851717 70%,
+    #350806 100%  
+  );
+}
+
+.chk-word {
+  position: relative;
+  z-index: 1;
+  font-family: "Prata", serif;
+  font-size: clamp(24px, 5vw, 60px); /* スマホでも崩れないようにサイズ調整 */
+  font-weight: 700;
+  opacity: 0; /* 最初は見えない */
+  transform: translateX(-130%) skewX(8deg);
+  white-space: nowrap; /* 勝手な改行を防ぐ */
+}
+
+.chk-word::after {
+  content: "";         /* おまじない（必須） */
+  display: block;      /* ブロック要素にして文字の下の行へ配置 */
+  width: 100%;         /* 幅は文字の長さに合わせる */
+  height: 3px;         /* 線の太さ */
+  margin-top: 5px;     /* 文字と線の間の隙間（お好みで調整） */
+
+  /* ▼▼▼ ここがグラデーションの設定 ▼▼▼ */
+  /* 90deg = 左から右へ流れる
+     #000 = 開始色（真っ黒）
+     transparent = 終了色（透明） */
+  background-image: linear-gradient(90deg, #000, transparent);
+}
+
+
+.chk-wrapper.is-visible .chk-text::before {
+  animation: chkCover 1.2s cubic-bezier(0.39,0.575,0.565,1) forwards;
+}
+
+.chk-wrapper.is-visible .chk-text::after {
+  animation: chkCover 1.2s cubic-bezier(0.39,0.575,0.565,1) forwards;
+  animation-delay: 0.16s;
+}
+
+.chk-wrapper.is-visible .chk-word {
+  animation: chkText 0.8s cubic-bezier(0.16,1,0.3,1) forwards;
+  animation-delay: 0.3s;
+}
+/* キーフレーム */
+@keyframes chkCover {
+  0%   { transform: translateX(-105%); }
+  60%  { transform: translateX(0); }
+  100% { transform: translateX(105%); }
+}
+
+@keyframes chkText {
+  0% {
+    opacity: 0;
+    transform: translateX(-110%) skewX(8deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) skewX(0);
+  }
+}
+.sign {
+  text-align: right;
+}
